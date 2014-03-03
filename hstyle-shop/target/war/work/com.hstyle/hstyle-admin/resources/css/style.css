@@ -1,0 +1,175 @@
+/*-------------------------按钮图片样式-------------------------------------*/
+/*新增*/
+.add {
+    background: url(../images/icon/add.png) no-repeat !important;
+}
+/*编辑*/
+.edit {
+    background: url(../images/icon/n_edit.png) no-repeat !important;
+}
+/*删除*/
+.delete {
+    background: url(../images/icon/delete.gif) no-repeat !important;
+}
+/*清除*/
+.clean {
+	background: url(../images/icon/clean.png) no-repeat !important;
+}
+/*反审*/
+.anti-trial {
+    background: url(../images/icon/n_anti-trial.png.png) no-repeat !important;
+}
+/*审计*/
+.audit {
+	background: url(../images/icon/n_audit.png) no-repeat !important;
+}
+/*批次*/
+.batch {
+	background: url(../images/icon/n_batch.png) no-repeat !important;
+}
+/*客户服务*/
+.customerService {
+	background: url(../images/icon/n_customerService.png) no-repeat !important;
+}
+/*下载*/
+.download {
+	background: url(../images/icon/n_download.png) no-repeat !important;
+}
+/*上传*/
+.upload {
+	background: url(../images/icon/n_upload.png) no-repeat !important;
+}
+/*回收*/
+.trash {
+	background: url(../images/icon/n_trash.png) no-repeat !important;
+}
+/*交换*/
+.exchange {
+	background: url(../images/icon/n_exchange.png) no-repeat !important;
+}
+/*录入*/
+.import {
+	background: url(../images/icon/n_import.png) no-repeat !important;
+}
+/*作废*/
+.invalid {
+	background: url(../images/icon/n_invalid.png) no-repeat !important;
+}
+/*锁定*/
+.lock {
+	background: url(../images/icon/n_lock.png) no-repeat !important;
+}
+/*解锁*/
+.unlock {
+	background: url(../images/icon/n_unlock.png) no-repeat !important;
+}
+/*拆分*/
+.split {
+	background: url(../images/icon/n_split.png) no-repeat !important;
+}
+/*合并*/
+.merger {
+	background: url(../images/icon/n_merger.png) no-repeat !important;
+}
+/*消息、通知*/
+.message {
+	background: url(../images/icon/n_message.png) no-repeat !important;
+}
+/*打印*/
+.print {
+	background: url(../images/icon/n_print.png) no-repeat !important;
+}
+/*刷新*/
+.refresh {
+	background: url(../images/icon/n_refresh.gif) no-repeat !important;
+}
+/*查找、搜索*/
+.search {
+	background: url(../images/icon/n_search.png) no-repeat !important;
+}
+/*表格_添加*/
+.table-add {
+    background: url(../images/icon/table_add.png) no-repeat !important;
+}
+/*表格_编辑*/
+.table-edit {
+    background: url(../images/icon/table_edit.png) no-repeat !important;
+}
+/*表格_删除*/
+.table-delete {
+    background: url(../images/icon/table_delete.png) no-repeat !important;
+}
+/*表格_保存*/
+.table-save {
+    background: url(../images/icon/table_save.png) no-repeat !important;
+}
+/*统计*/
+.statistics {
+	background: url(../images/icon/statistics.png) no-repeat !important;
+}
+/*权限*/
+.authority {
+	background: url(../images/icon/authority.png) no-repeat !important;
+}
+/*标记*/
+.mark {
+	background: url(../images/icon/mark.png) no-repeat !important;
+}
+/*部门*/
+.department {
+	background: url(../images/icon/department.png) no-repeat !important;
+}
+/*仓库*/
+.warehouse {
+	background: url(../images/icon/warehouse.png) no-repeat !important;
+}
+/*人员*/
+.persons {
+	background: url(../images/icon/personnel.png) no-repeat !important;
+}
+/*人员—增*/
+.person-add {
+	background: url(../images/icon/personnel_add.png) no-repeat !important;
+}
+/*人员—减*/
+.person-delete {
+	background: url(../images/icon/personnel_del.png) no-repeat !important;
+}
+/*人员—编辑*/
+.person-edit {
+	background: url(../images/icon/personnel_edit.png) no-repeat !important;
+}
+/*人员密码重置*/
+.password-reset {
+	background: url(../images/icon/n_exchange.png) no-repeat !important;
+}
+/*店铺*/
+.shop {
+	background: url(../images/icon/shop.png) no-repeat !important;
+}
+/*资源*/
+.resources {
+	background: url(../images/icon/resources.png) no-repeat !important;
+}
+/*操作*/
+.operate {
+	background: url(../images/icon/operate.png) no-repeat !important;
+}
+/*模块*/
+.module {
+	background: url(../images/icon/module.png) no-repeat !important;
+}
+/*关闭退出*/
+.close {
+	background: url(../images/icon/close.png) no-repeat !important;
+}
+/*确定*/
+.accept {
+	background: url(../images/icon/accept.png) no-repeat !important;
+}
+/**禁用*/
+.disabled{
+	background: url(../images/icon/disabled.png) no-repeat !important;
+}
+
+

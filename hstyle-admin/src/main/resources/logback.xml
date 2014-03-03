@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<configuration>  
+
+  <appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">  
+    <layout class="ch.qos.logback.classic.PatternLayout">  
+      <pattern>%-20(%d{HH:mm:ss.SSS} [%thread]) %-5level %logger{80} - %msg%n</pattern>  
+    </layout>
+    <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+      <level>INFO</level>
+    </filter>  
+  </appender>  
+
+  <appender name="file" class="ch.qos.logback.core.rolling.RollingFileAppender">  
+    <file>d:\\logs\hstyle-admin.log</file>  
+    <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">  
+      <fileNamePattern>logs\hstyle-admin.%d{yyyy-MM-dd}.log.zip</fileNamePattern>  
+    </rollingPolicy>  
+    <layout class="ch.qos.logback.classic.PatternLayout">  
+      <pattern>%-20(%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread]) %-5level %logger{80} - %msg%n</pattern>  
+    </layout> 
+    <filter class="ch.qos.logback.classic.filter.LevelFilter">
+      <level>INFO</level>
+      <onMatch>ACCEPT</onMatch>
+      <onMismatch>DENY</onMismatch>
+    </filter>
+  </appender>  
+  <logger name="com.hstyle.admin" >
+      <appender-ref ref="file" />
+  </logger>
+  <root level="INFO">  
+    <appender-ref ref="file" />  
+    <appender-ref ref="stdout" />  
+  </root>  
+</configuration>

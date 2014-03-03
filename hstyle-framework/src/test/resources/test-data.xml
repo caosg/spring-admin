@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+ 
+  <app_user id="1" username="user"  password="123433"  first_name="Tomcat" last_name="User" address=""  city="Denver"
+            country="US" email="matt_raible@yahoo.com" phone_number="18612345678"  postal_code="809011" province="CO"
+            website="http://tomcat.apache.org" password_hint="A male kitty." version="1" account_enabled="1"  account_expired="0" account_locked="0" credentials_expired="0"/>
+  <app_user id="2" username="admin"  password="123452"  first_name="Tom" last_name="Userd" address=""  city="Denver"
+            country="US" email="raible@yahoo.com" phone_number="18612345578"  postal_code="809011" province="CO"
+            website="http://tomcat.apache.org" password_hint="A male kitty." version="1" account_enabled="1"  account_expired="0" account_locked="0" credentials_expired="0"/>
+  <app_user id="3" username="guest"  password="123456"  first_name="Kicat" last_name="Uit" address=""  city="Denver"
+            country="US" email="qaible@yahoo.com" phone_number="18612322678"  postal_code="809011" province="CO"
+            website="http://tomcat.apache.org" password_hint="A male kitty." version="1" account_enabled="1"  account_expired="0" account_locked="0" credentials_expired="0"/>
+  <user_role user_id="1" role_id="2"/>
+  <user_role user_id="2" role_id="1"/>
+  <user_role user_id="3" role_id="1"/>
+</dataset>

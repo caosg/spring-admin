@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"
+       default-lazy-init="true">
+
+    <bean class="org.springframework.orm.hibernate4.HibernateExceptionTranslator"/>
+    <bean class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor"/>
+    <context:property-placeholder ignore-resource-not-found="false"	
+            location="classpath*:/jdbc.properties"/>
+    <!-- Hibernate SessionFactory -->
+    <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+        <property name="driverClassName" value="${jdbc.driverClassName}"/>
+        <property name="url" value="${jdbc.url}"/>
+        <property name="username" value="${jdbc.username}"/>
+        <property name="password" value="${jdbc.password}"/>
+        <property name="defaultAutoCommit" value="false" />
+        <!--initialSize: 初始化连接-->
+        <property name="initialSize" value="1"></property>
+        <!--maxActive: 最大连接数量-->
+        <property name="maxActive" value="100"></property>
+        <!--maxIdle: 最大空闲连接--> 
+        <property name="maxIdle" value="30"></property>
+        <!--minIdle: 最小空闲连接-->
+        <property name="minIdle" value="20"></property>
+        <!--maxWait: 超时等待时间以毫秒为单位 --> 
+        <property name="maxWait" value="6000"></property>
+        <!--removeAbandoned: 是否自动回收超时连接-->  
+        <property name="removeAbandoned" value="true"/>  
+        <!--removeAbandonedTimeout: 超时时间(以秒数为单位)-->  
+        <property name="removeAbandonedTimeout" value="180"/>
+    </bean>
+    <bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean" destroy-method="destroy">
+        <property name="dataSource" ref="dataSource"/>
+        <property name="packagesToScan">
+           <list>
+             <value>com.hstyle.admin.model</value>
+             
+           </list>
+        </property>
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.dialect">${hibernate.dialect}</prop>
+                <prop key="hibernate.query.substitutions">true 'Y', false 'N'</prop>
+                <prop key="hibernate.cache.use_second_level_cache">false</prop>
+                <prop key="hibernate.cache.provider_class">org.hibernate.cache.EhCacheProvider</prop>
+                <!-- Hibernate Search index directory -->
+                <prop key="hibernate.search.default.indexBase">${app.search.index.basedir}</prop>
+                <prop key="hibernate.show_sql">true</prop>
+            </props>
+            <!-- Turn batching off for better error messages under PostgreSQL -->
+            <!-- hibernate.jdbc.batch_size=0 -->
+        </property>
+    </bean>
+
+    <!-- Transaction manager for a single Hibernate SessionFactory (alternative to JTA) -->
+    <bean id="transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+
+    <!-- Activates scanning of @Autowired -->
+    <context:annotation-config/>
+
+    <!-- Activates scanning of @Repository -->
+    <context:component-scan base-package="com.hstyle.admin.dao"/>
+	
+</beans>
